@@ -49,6 +49,34 @@ protected:
 		meta = (ClampMin = "300", UIMin = "300", ClampMax = "500", UIMax = "500"))
 	float MinArmLength = 400.0f;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sprint")
+	float SprintSpeed = 600.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sprint")
+	float WalkSpeed = 300.f;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Sprint")
+	bool isSprinting = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Sprint")
+	int MaxStamina = 100;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Sprint")
+	int Stamina = 100;	
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sprint")
+	int StaminaDrain = 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sprint")
+	int StaminaRefill = 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sprint")
+	float DelayBeforeRefill = 10.f;
+
+	float CurrentDelayRefillTime;
+	bool bHeasStamina;
+
+
 
 public:
 	// Called every frame
@@ -64,6 +92,14 @@ private:
 
 	void MoveForward(float Value);
 	void MoveRight(float Value);
+
+	//sprint action
+	void StartSprint();
+	void StopSprint();
+
+	//stamina
+	void UpdateStamina();
+
 
 	void ZoomIn();
 	void ZoomOut();

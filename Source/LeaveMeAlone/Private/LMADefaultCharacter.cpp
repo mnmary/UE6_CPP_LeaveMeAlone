@@ -7,6 +7,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 // Sets default values
 ALMADefaultCharacter::ALMADefaultCharacter()
@@ -71,6 +72,8 @@ void ALMADefaultCharacter::Tick(float DeltaTime)
 			CurrentCursor->SetWorldLocation(ResultHit.Location);
 		}
 	}
+
+	UpdateStamina();
 }
 
 // Called to bind functionality to input
@@ -84,6 +87,8 @@ void ALMADefaultCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 	PlayerInputComponent->BindAction("ZoomIn", IE_Pressed, this, &ALMADefaultCharacter::ZoomIn);
 	PlayerInputComponent->BindAction("ZoomOut", IE_Pressed, this, &ALMADefaultCharacter::ZoomOut);
 
+	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &ALMADefaultCharacter::StartSprint);
+	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &ALMADefaultCharacter::StopSprint);
 }
 
 void ALMADefaultCharacter::MoveForward(float Value) 
@@ -94,6 +99,58 @@ void ALMADefaultCharacter::MoveForward(float Value)
 void ALMADefaultCharacter::MoveRight(float Value) 
 {
 	AddMovementInput(GetActorRightVector(), Value);
+}
+
+void ALMADefaultCharacter::StartSprint()
+{
+	if (bHeasStamina)
+	{
+		GetCharacterMovement()->MaxWalkSpeed = SprintSpeed;
+		if (GetVelocity().Size() >= 0.5)
+		{
+			isSprinting = true;
+		}
+		else
+		{
+			isSprinting = false;
+		
+		}
+	}
+}
+
+void ALMADefaultCharacter::StopSprint()
+{
+	GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
+	isSprinting = false;
+}
+
+void ALMADefaultCharacter::UpdateStamina()
+{
+	if (isSprinting)
+	{
+		Stamina -= StaminaDrain;
+		CurrentDelayRefillTime = DelayBeforeRefill;
+	}
+
+	if (!isSprinting && Stamina < MaxStamina)
+	{
+		CurrentDelayRefillTime --;
+		if (CurrentDelayRefillTime <= 0)
+		{
+			Stamina += StaminaRefill;
+		}
+	}
+
+	if (Stamina <= 0)
+	{
+		bHeasStamina = false;
+		StopSprint();
+	}
+	else
+	{
+		bHeasStamina = true;
+	}
+	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("Stamina = %f"), Stamina));
 }
 
 void ALMADefaultCharacter::ZoomIn() 
