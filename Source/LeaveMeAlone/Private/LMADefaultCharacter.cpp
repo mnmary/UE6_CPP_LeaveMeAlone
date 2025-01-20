@@ -54,6 +54,7 @@ void ALMADefaultCharacter::BeginPlay()
 	}
 	SpringArmComponent->TargetArmLength = ArmLength;
 
+	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("Stamina = %d  MAX = %d"), Stamina, MaxStamina));
 }
 
 // Called every frame
@@ -103,6 +104,7 @@ void ALMADefaultCharacter::MoveRight(float Value)
 
 void ALMADefaultCharacter::StartSprint()
 {
+	
 	if (bHeasStamina)
 	{
 		GetCharacterMovement()->MaxWalkSpeed = SprintSpeed;
@@ -112,14 +114,14 @@ void ALMADefaultCharacter::StartSprint()
 		}
 		else
 		{
-			isSprinting = false;
-		
+			isSprinting = false;		
 		}
 	}
 }
 
 void ALMADefaultCharacter::StopSprint()
 {
+	
 	GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
 	isSprinting = false;
 }
@@ -128,8 +130,16 @@ void ALMADefaultCharacter::UpdateStamina()
 {
 	if (isSprinting)
 	{
-		Stamina -= StaminaDrain;
+		CurrentDelayDrainTime --;
+		if (CurrentDelayDrainTime <= 0)
+		{
+			Stamina -= StaminaDrain;
+		}
 		CurrentDelayRefillTime = DelayBeforeRefill;
+	}
+	else
+	{
+		CurrentDelayDrainTime = DelayBeforeDrain;
 	}
 
 	if (!isSprinting && Stamina < MaxStamina)
@@ -150,7 +160,7 @@ void ALMADefaultCharacter::UpdateStamina()
 	{
 		bHeasStamina = true;
 	}
-	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("Stamina = %f"), Stamina));
+	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("Stamina = %d"), Stamina));
 }
 
 void ALMADefaultCharacter::ZoomIn() 

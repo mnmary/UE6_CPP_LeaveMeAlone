@@ -71,9 +71,13 @@ protected:
 	int StaminaRefill = 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sprint")
-	float DelayBeforeRefill = 10.f;
+	float DelayBeforeRefill = 100.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sprint")
+	float DelayBeforeDrain = 100.f;
 
 	float CurrentDelayRefillTime;
+	float CurrentDelayDrainTime;
 	bool bHeasStamina;
 
 
