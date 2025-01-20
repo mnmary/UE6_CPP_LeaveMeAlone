@@ -128,18 +128,16 @@ void ALMADefaultCharacter::StopSprint()
 
 void ALMADefaultCharacter::UpdateStamina()
 {
-	if (isSprinting)
+	if (isSprinting && Stamina > 0)
 	{
 		CurrentDelayDrainTime --;
 		if (CurrentDelayDrainTime <= 0)
 		{
 			Stamina -= StaminaDrain;
+			CurrentDelayDrainTime = DelayBeforeDrain;
+			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("Stamina = %d"), Stamina));
 		}
 		CurrentDelayRefillTime = DelayBeforeRefill;
-	}
-	else
-	{
-		CurrentDelayDrainTime = DelayBeforeDrain;
 	}
 
 	if (!isSprinting && Stamina < MaxStamina)
@@ -148,7 +146,10 @@ void ALMADefaultCharacter::UpdateStamina()
 		if (CurrentDelayRefillTime <= 0)
 		{
 			Stamina += StaminaRefill;
+			CurrentDelayRefillTime = DelayBeforeRefill;
+			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("Stamina = %d"), Stamina));
 		}
+		CurrentDelayDrainTime = DelayBeforeDrain;
 	}
 
 	if (Stamina <= 0)
@@ -160,7 +161,7 @@ void ALMADefaultCharacter::UpdateStamina()
 	{
 		bHeasStamina = true;
 	}
-	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("Stamina = %d"), Stamina));
+	
 }
 
 void ALMADefaultCharacter::ZoomIn() 
