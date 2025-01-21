@@ -31,6 +31,10 @@ ALMADefaultCharacter::ALMADefaultCharacter()
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
+
+	WeaponComponent = CreateDefaultSubobject<ULMAWeaponComponent>("Weapon");	
+
+	
 }
 
 // Called when the game starts or when spawned
@@ -75,6 +79,8 @@ void ALMADefaultCharacter::Tick(float DeltaTime)
 	}
 
 	UpdateStamina();
+
+	UpdateFire();
 }
 
 // Called to bind functionality to input
@@ -90,6 +96,20 @@ void ALMADefaultCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 
 	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &ALMADefaultCharacter::StartSprint);
 	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &ALMADefaultCharacter::StopSprint);
+
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &ALMADefaultCharacter::Fire);
+	PlayerInputComponent->BindAction("Fire", IE_Released, this, &ALMADefaultCharacter::StopFire);
+
+}
+void ALMADefaultCharacter::Fire() 
+{
+	if (WeaponComponent) bIsFire = true;
+	WeaponComponent->Fire();
+	CurrentTimerFire = MaxTimerFire;
+}
+void ALMADefaultCharacter::StopFire() 
+{
+		bIsFire = false;
 }
 
 void ALMADefaultCharacter::MoveForward(float Value) 
@@ -162,6 +182,21 @@ void ALMADefaultCharacter::UpdateStamina()
 		bHeasStamina = true;
 	}
 	
+}
+
+void ALMADefaultCharacter::UpdateFire()
+{
+	if (bIsFire)
+	{
+		CurrentTimerFire --;
+		if (CurrentTimerFire <= 0)
+		{
+			CurrentTimerFire = MaxTimerFire;
+			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("FIRE = %s"), "FIRE"));
+			WeaponComponent->Fire();
+		}
+
+	}
 }
 
 void ALMADefaultCharacter::ZoomIn() 

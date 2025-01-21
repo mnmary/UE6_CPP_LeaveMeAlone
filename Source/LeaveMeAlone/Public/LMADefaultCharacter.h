@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "LMAWeaponComponent.h"
 #include "LMADefaultCharacter.generated.h"
 
 class UCameraComponent;
@@ -80,7 +81,12 @@ protected:
 	float CurrentDelayDrainTime;
 	bool bHeasStamina;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
+	ULMAWeaponComponent* WeaponComponent;
 
+	bool bIsFire;
+	float MaxTimerFire = 100.f;
+	float CurrentTimerFire;
 
 public:
 	// Called every frame
@@ -107,4 +113,8 @@ private:
 
 	void ZoomIn();
 	void ZoomOut();
+
+	void Fire();
+	void StopFire();
+	void UpdateFire();
 };
