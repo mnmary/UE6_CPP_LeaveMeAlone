@@ -192,8 +192,10 @@ void ALMADefaultCharacter::UpdateFire()
 		if (CurrentTimerFire <= 0)
 		{
 			CurrentTimerFire = MaxTimerFire;
-			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("FIRE = %s"), "FIRE"));
+			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString(TEXT("FIRE")));
 			WeaponComponent->Fire();
+
+
 		}
 
 	}

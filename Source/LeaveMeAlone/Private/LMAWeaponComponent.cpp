@@ -15,6 +15,8 @@ void ULMAWeaponComponent::Fire()
 	if (Weapon)
 	{
 		Weapon->Fire();
+		ACharacter* Character = Cast<ACharacter>(GetOwner());
+		Character->PlayAnimMontage(FireMontage);		
 	}
 }
 

@@ -23,6 +23,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category="Weapon")
 	TSubclassOf<ALMABaseWeapon> WeaponClass;
 
+	UPROPERTY(EditDefaultsOnly, Category="Weapon")
+	UAnimMontage* FireMontage;
+
 	virtual void BeginPlay() override;
 
 public:

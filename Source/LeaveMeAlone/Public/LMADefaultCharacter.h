@@ -84,6 +84,8 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
 	ULMAWeaponComponent* WeaponComponent;
 
+
+
 	bool bIsFire;
 	float MaxTimerFire = 100.f;
 	float CurrentTimerFire;
@@ -94,7 +96,6 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
 private:
 	float YRotation = -75.0f;  
 	float ArmLength = 1400.0f; 
