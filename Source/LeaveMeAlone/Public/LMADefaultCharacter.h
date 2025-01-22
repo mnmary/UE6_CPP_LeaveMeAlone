@@ -118,4 +118,7 @@ private:
 	void Fire();
 	void StopFire();
 	void UpdateFire();
+
+	void Reload();
+
 };

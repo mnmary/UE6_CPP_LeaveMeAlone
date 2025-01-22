@@ -35,6 +35,7 @@ public:
 	
 	void Fire();
 	void ChangeClip();
+	bool IsCurrentClipEmpty() const;
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Weapon")
 	USkeletalMeshComponent* WeaponComponent;
@@ -43,14 +44,14 @@ protected:
 	float TraceDistance = 800.0f;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Weapon")
-	FAmmoWeapon AmmoWeapon {30, 0, true};
+	FAmmoWeapon AmmoWeapon {5, 0, true};
 
 	virtual void BeginPlay() override;
 
 	void Shoot();
 
 	void DecrementBullets();
-	bool IsCurrentClipEmpty() const;
+	
 
 public:
 	virtual void Tick(float DeltaTime) override;
