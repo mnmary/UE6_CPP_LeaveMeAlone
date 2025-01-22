@@ -7,8 +7,10 @@
 #include "LMAWeaponComponent.h"
 #include "LMADefaultCharacter.generated.h"
 
+
 class UCameraComponent;
 class USpringArmComponent;
+class ULMAHealthComponent;
 
 UCLASS()
 class LEAVEMEALONE_API ALMADefaultCharacter : public ACharacter
@@ -90,6 +92,13 @@ protected:
 	float MaxTimerFire = 100.f;
 	float CurrentTimerFire;
 
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components|Health")
+	ULMAHealthComponent* HealthComponent;	
+
+	UPROPERTY(EditDefaultsOnly, Category="Animation")
+	UAnimMontage* DeathMontage;	
+
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -120,5 +129,10 @@ private:
 	void UpdateFire();
 
 	void Reload();
+
+	void OnDeath();
+	void OnHealthChanged(float NewHealth);
+
+	void RotationPlayerOnCursor();	
 
 };
