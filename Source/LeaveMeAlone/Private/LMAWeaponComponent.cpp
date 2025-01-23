@@ -96,3 +96,9 @@ void ULMAWeaponComponent::Reload()
 	ACharacter* Character = Cast<ACharacter>(GetOwner());
 	Character->PlayAnimMontage(ReloadMontage);
 }
+
+int32 ULMAWeaponComponent::GetAmmoWeapon()
+{
+	UE_LOG(LogWeapon, Display, TEXT("from baseBullets = %s"), *FString::FromInt(Weapon->GetAmmoWeapon()));
+	return Weapon->GetAmmoWeapon();
+}

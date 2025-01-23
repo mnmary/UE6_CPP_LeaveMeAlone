@@ -58,6 +58,12 @@ void ALMABaseWeapon::DecrementBullets()
 	
 }
 
+int32 ALMABaseWeapon::GetAmmoWeapon()
+{
+	UE_LOG(LogWeapon, Display, TEXT("get Bullets = %s"), *FString::FromInt(CurrentAmmoWeapon.Bullets));
+	return CurrentAmmoWeapon.Bullets;
+}
+
 bool ALMABaseWeapon::IsCurrentClipEmpty() const
 {
 	return CurrentAmmoWeapon.Bullets==0;

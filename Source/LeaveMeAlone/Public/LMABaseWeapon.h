@@ -36,6 +36,7 @@ public:
 	void Fire();
 	void ChangeClip();
 	bool IsCurrentClipEmpty() const;
+	int32 GetAmmoWeapon();
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Weapon")
 	USkeletalMeshComponent* WeaponComponent;
@@ -52,11 +53,12 @@ protected:
 
 	void DecrementBullets();
 	
-
+	
 public:
 	virtual void Tick(float DeltaTime) override;
-
+	
 private:
 	FAmmoWeapon CurrentAmmoWeapon;
+	
 };
 

@@ -29,12 +29,15 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category="Weapon")
 	UAnimMontage* ReloadMontage;
-
+	
+	UFUNCTION(BlueprintCallable)
+	int32 GetAmmoWeapon();
+	
 	virtual void BeginPlay() override;
 
 public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
+	
 private:
 	UPROPERTY()
 	ALMABaseWeapon* Weapon = nullptr;

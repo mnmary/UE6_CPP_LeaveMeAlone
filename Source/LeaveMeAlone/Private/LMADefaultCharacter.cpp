@@ -258,6 +258,7 @@ void ALMADefaultCharacter::OnDeath()
 	{
 		Controller->ChangeState(NAME_Spectating);
 	}
+	WeaponComponent->DestroyComponent();
 }
 
 void ALMADefaultCharacter::OnHealthChanged(float NewHealth)
