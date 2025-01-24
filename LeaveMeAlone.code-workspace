@@ -37,7 +37,7 @@
 					"LeaveMeAlone",
 					"Win64",
 					"Debug",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -54,7 +54,7 @@
 					"LeaveMeAlone",
 					"Win64",
 					"Debug",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -74,7 +74,7 @@
 					"LeaveMeAlone",
 					"Win64",
 					"Debug",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -91,7 +91,7 @@
 					"LeaveMeAlone",
 					"Win64",
 					"DebugGame",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -108,7 +108,7 @@
 					"LeaveMeAlone",
 					"Win64",
 					"DebugGame",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -128,7 +128,7 @@
 					"LeaveMeAlone",
 					"Win64",
 					"DebugGame",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -145,7 +145,7 @@
 					"LeaveMeAlone",
 					"Win64",
 					"Development",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -162,7 +162,7 @@
 					"LeaveMeAlone",
 					"Win64",
 					"Development",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -182,7 +182,7 @@
 					"LeaveMeAlone",
 					"Win64",
 					"Development",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -199,7 +199,7 @@
 					"LeaveMeAlone",
 					"Win64",
 					"Test",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -216,7 +216,7 @@
 					"LeaveMeAlone",
 					"Win64",
 					"Test",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -236,7 +236,7 @@
 					"LeaveMeAlone",
 					"Win64",
 					"Test",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -253,7 +253,7 @@
 					"LeaveMeAlone",
 					"Win64",
 					"Shipping",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -270,7 +270,7 @@
 					"LeaveMeAlone",
 					"Win64",
 					"Shipping",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -290,7 +290,7 @@
 					"LeaveMeAlone",
 					"Win64",
 					"Shipping",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -307,7 +307,7 @@
 					"LeaveMeAloneEditor",
 					"Win64",
 					"Debug",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -324,7 +324,7 @@
 					"LeaveMeAloneEditor",
 					"Win64",
 					"Debug",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -344,7 +344,7 @@
 					"LeaveMeAloneEditor",
 					"Win64",
 					"Debug",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -361,7 +361,7 @@
 					"LeaveMeAloneEditor",
 					"Win64",
 					"DebugGame",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -378,7 +378,7 @@
 					"LeaveMeAloneEditor",
 					"Win64",
 					"DebugGame",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -398,7 +398,7 @@
 					"LeaveMeAloneEditor",
 					"Win64",
 					"DebugGame",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -415,7 +415,7 @@
 					"LeaveMeAloneEditor",
 					"Win64",
 					"Development",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -432,7 +432,7 @@
 					"LeaveMeAloneEditor",
 					"Win64",
 					"Development",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -452,7 +452,7 @@
 					"LeaveMeAloneEditor",
 					"Win64",
 					"Development",
-					"E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -469,7 +469,7 @@
 			{
 				"name": "Launch LeaveMeAlone (Debug)",
 				"request": "launch",
-				"program": "E:\\HW6\\5\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
+				"program": "E:\\HW8\\1\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
 				"preLaunchTask": "LeaveMeAlone Win64 Debug Build",
 				"args": [
 				],
@@ -485,7 +485,7 @@
 			{
 				"name": "Launch LeaveMeAlone (DebugGame)",
 				"request": "launch",
-				"program": "E:\\HW6\\5\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
+				"program": "E:\\HW8\\1\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
 				"preLaunchTask": "LeaveMeAlone Win64 DebugGame Build",
 				"args": [
 				],
@@ -501,7 +501,7 @@
 			{
 				"name": "Launch LeaveMeAlone (Development)",
 				"request": "launch",
-				"program": "E:\\HW6\\5\\Binaries\\Win64\\UnrealGame.exe",
+				"program": "E:\\HW8\\1\\Binaries\\Win64\\UnrealGame.exe",
 				"preLaunchTask": "LeaveMeAlone Win64 Development Build",
 				"args": [
 				],
@@ -517,7 +517,7 @@
 			{
 				"name": "Launch LeaveMeAlone (Test)",
 				"request": "launch",
-				"program": "E:\\HW6\\5\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
+				"program": "E:\\HW8\\1\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
 				"preLaunchTask": "LeaveMeAlone Win64 Test Build",
 				"args": [
 				],
@@ -533,7 +533,7 @@
 			{
 				"name": "Launch LeaveMeAlone (Shipping)",
 				"request": "launch",
-				"program": "E:\\HW6\\5\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
+				"program": "E:\\HW8\\1\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
 				"preLaunchTask": "LeaveMeAlone Win64 Shipping Build",
 				"args": [
 				],
@@ -552,7 +552,7 @@
 				"program": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
 				"preLaunchTask": "LeaveMeAloneEditor Win64 Debug Build",
 				"args": [
-					"E:\\HW6\\5\\LeaveMeAlone.uproject"
+					"E:\\HW8\\1\\LeaveMeAlone.uproject"
 				],
 				"cwd": "C:\\Program Files\\Epic Games\\UE_5.5",
 				"stopAtEntry": false,
@@ -569,7 +569,7 @@
 				"program": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
 				"preLaunchTask": "LeaveMeAloneEditor Win64 DebugGame Build",
 				"args": [
-					"E:\\HW6\\5\\LeaveMeAlone.uproject"
+					"E:\\HW8\\1\\LeaveMeAlone.uproject"
 				],
 				"cwd": "C:\\Program Files\\Epic Games\\UE_5.5",
 				"stopAtEntry": false,
@@ -586,7 +586,7 @@
 				"program": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
 				"preLaunchTask": "LeaveMeAloneEditor Win64 Development Build",
 				"args": [
-					"E:\\HW6\\5\\LeaveMeAlone.uproject"
+					"E:\\HW8\\1\\LeaveMeAlone.uproject"
 				],
 				"cwd": "C:\\Program Files\\Epic Games\\UE_5.5",
 				"stopAtEntry": false,
@@ -606,7 +606,7 @@
 				"args": [
 					"-projectfiles",
 					"-vscode",
-					"-project=E:\\HW6\\5\\LeaveMeAlone.uproject",
+					"-project=E:\\HW8\\1\\LeaveMeAlone.uproject",
 					"-game",
 					"-engine",
 					"-dotnet"

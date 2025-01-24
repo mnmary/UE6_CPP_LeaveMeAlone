@@ -3,6 +3,8 @@
 
 #include "LMAHealthComponent.h"
 
+DEFINE_LOG_CATEGORY_STATIC(LogWeapon, All, All);
+
 ULMAHealthComponent::ULMAHealthComponent()
 {
 	PrimaryComponentTick.bCanEverTick = false;
@@ -10,6 +12,10 @@ ULMAHealthComponent::ULMAHealthComponent()
 
 bool ULMAHealthComponent::IsDead() const
 {
+	if (Health <= 0.0f)
+	{
+		
+	}
 	return Health <= 0.0f;
 }
 

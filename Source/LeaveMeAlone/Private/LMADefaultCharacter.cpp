@@ -10,6 +10,8 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
+DEFINE_LOG_CATEGORY_STATIC(LogWeapon, All, All);
+
 // Sets default values
 ALMADefaultCharacter::ALMADefaultCharacter()
 {
@@ -59,7 +61,7 @@ void ALMADefaultCharacter::BeginPlay()
 	}
 	SpringArmComponent->TargetArmLength = ArmLength;
 
-	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("Stamina = %d  MAX = %d"), Stamina, MaxStamina));
+	//GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("Stamina = %d  MAX = %d"), Stamina, MaxStamina));
 
 	OnHealthChanged(HealthComponent->GetHealth());
 	HealthComponent->OnDeath.AddUObject(this, &ALMADefaultCharacter::OnDeath);
@@ -178,7 +180,7 @@ void ALMADefaultCharacter::UpdateStamina()
 		{
 			Stamina -= StaminaDrain;
 			CurrentDelayDrainTime = DelayBeforeDrain;
-			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("Stamina = %d"), Stamina));
+			//GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("Stamina = %d"), Stamina));
 		}
 		CurrentDelayRefillTime = DelayBeforeRefill;
 	}
@@ -190,7 +192,7 @@ void ALMADefaultCharacter::UpdateStamina()
 		{
 			Stamina += StaminaRefill;
 			CurrentDelayRefillTime = DelayBeforeRefill;
-			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("Stamina = %d"), Stamina));
+			//GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("Stamina = %d"), Stamina));
 		}
 		CurrentDelayDrainTime = DelayBeforeDrain;
 	}
@@ -215,7 +217,7 @@ void ALMADefaultCharacter::UpdateFire()
 		if (CurrentTimerFire <= 0)
 		{
 			CurrentTimerFire = MaxTimerFire;
-			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString(TEXT("FIRE")));
+			//GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString(TEXT("FIRE")));
 			WeaponComponent->Fire();
 
 
@@ -258,12 +260,16 @@ void ALMADefaultCharacter::OnDeath()
 	{
 		Controller->ChangeState(NAME_Spectating);
 	}
+	
 	WeaponComponent->DestroyComponent();
+
+	UE_LOG(LogWeapon, Display, TEXT("IS DEAD"))
+	
 }
 
 void ALMADefaultCharacter::OnHealthChanged(float NewHealth)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("Health = %f"), NewHealth));
+	//GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("Health = %f"), NewHealth));
 }
 
 void ALMADefaultCharacter::RotationPlayerOnCursor()
