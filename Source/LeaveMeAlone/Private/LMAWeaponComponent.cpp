@@ -89,7 +89,13 @@ bool ULMAWeaponComponent::CanReload() const
 
 void ULMAWeaponComponent::Reload()
 {
+	UE_LOG(LogWeapon, Display, TEXT("RELOAD FROM CH: current = %s  max = %s"), *FString::FromInt(Weapon->GetAmmoWeapon()), *FString::FromInt(Weapon->GetMaxAmmoWeapon()))
 	if(!CanReload()) return;
+	if (Weapon->GetAmmoWeapon() == Weapon->GetMaxAmmoWeapon())
+	{
+		UE_LOG(LogWeapon, Display, TEXT("Charge is full - fire is cancelled!"));
+		return;
+	}
 	Weapon->ChangeClip();
 	AnimReloading = true;
 	UE_LOG(LogWeapon, Display, TEXT("AnimLoading = true"));
@@ -99,6 +105,6 @@ void ULMAWeaponComponent::Reload()
 
 int32 ULMAWeaponComponent::GetAmmoWeapon()
 {
-	UE_LOG(LogWeapon, Display, TEXT("from baseBullets = %s"), *FString::FromInt(Weapon->GetAmmoWeapon()));
+	//UE_LOG(LogWeapon, Display, TEXT("from baseBullets = %s"), *FString::FromInt(Weapon->GetAmmoWeapon()));
 	return Weapon->GetAmmoWeapon();
 }

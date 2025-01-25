@@ -37,6 +37,7 @@ public:
 	void ChangeClip();
 	bool IsCurrentClipEmpty() const;
 	int32 GetAmmoWeapon();
+	int32 GetMaxAmmoWeapon();
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Weapon")
 	USkeletalMeshComponent* WeaponComponent;

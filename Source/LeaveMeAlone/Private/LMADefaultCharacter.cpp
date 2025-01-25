@@ -122,6 +122,7 @@ void ALMADefaultCharacter::Reload()
 {
 	if (WeaponComponent)
 	{
+		UE_LOG(LogWeapon, Display, TEXT("RELOAD TO WEAPON"));
 		WeaponComponent->Reload();
 	}
 }

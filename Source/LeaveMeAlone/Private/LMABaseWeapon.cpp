@@ -61,10 +61,15 @@ void ALMABaseWeapon::DecrementBullets()
 
 int32 ALMABaseWeapon::GetAmmoWeapon()
 {
-	//UE_LOG(LogWeapon, Display, TEXT("get Bullets = %s"), *FString::FromInt(CurrentAmmoWeapon.Bullets));
+	UE_LOG(LogWeapon, Display, TEXT("get Bullets = %s"), *FString::FromInt(CurrentAmmoWeapon.Bullets));
 	return CurrentAmmoWeapon.Bullets;
 }
 
+int32 ALMABaseWeapon::GetMaxAmmoWeapon()
+{
+	UE_LOG(LogWeapon, Display, TEXT("get Max Bullets = %s"), *FString::FromInt(AmmoWeapon.Bullets));
+	return AmmoWeapon.Bullets;
+}
 bool ALMABaseWeapon::IsCurrentClipEmpty() const
 {
 	return CurrentAmmoWeapon.Bullets==0;
